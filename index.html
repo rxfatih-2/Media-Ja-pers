@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ja'pers — Media Informasi</title>
+  <title>Ja'pers News — Media Informasi</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
@@ -17,125 +17,109 @@
       <img src="LOGO_URL_DISINI" alt="Logo Ja'pers" class="logo-img" />
       <div class="brand-text">
         <span class="brand-name">Ja'pers</span>
-        <span class="brand-tag">Media</span>
+        <span class="brand-tag">NEWS</span>
       </div>
     </a>
     <nav class="nav-links" id="navLinks">
       <a href="#home" class="active">Home</a>
+      <a href="#berita">Berita</a>
       <a href="#video">Video</a>
-      <a href="#trending">Trending</a>
-      <a href="#about">Tentang</a>
-      <a href="#contact">Kontak</a>
+      <a href="#tentang">Tentang</a>
+      <a href="#kontak">Kontak</a>
     </nav>
     <div class="nav-actions">
-      <a href="#contact" class="btn-primary">Subscribe</a>
+      <a href="#kontak" class="btn-primary">Subscribe</a>
       <button class="hamburger" id="hamburger" aria-label="Menu">
         <span></span><span></span><span></span>
       </button>
     </div>
   </div>
 </header><section class="hero" id="home">
-  <div class="container hero-inner">
-    <div class="hero-content">
-      <span class="badge">● LIVE MEDIA</span>
-      <h1 class="hero-title">Berita Tajam,<br><span class="accent-text">Perspektif Baru.</span></h1>
-      <p class="hero-desc">Ja'pers menghadirkan liputan mendalam, analisis tajam, dan video eksklusif dari peristiwa paling relevan.</p>
-      <div class="hero-cta">
-        <a href="#video" class="btn-primary btn-lg">Tonton Sekarang</a>
-        <a href="#trending" class="btn-ghost btn-lg">Trending</a>
-      </div>
-      <div class="hero-stats">
-        <div><strong>120K+</strong><span>Penonton</span></div>
-        <div><strong>850+</strong><span>Video</span></div>
-        <div><strong>24/7</strong><span>Update</span></div>
-      </div>
-    </div>
-    <div class="hero-media">
-      <div class="video-frame">
-        <video id="heroVideo" poster="https://images.unsplash.com/photo-1492619375914-88005aa9e8fb?w=1200&q=80" muted loop playsinline controls>
-          <source src="https://cdn.coverr.co/videos/coverr-a-man-working-on-a-laptop-1573/1080p.mp4" type="video/mp4" />
-        </video>
-        <div class="video-overlay"><span class="live-dot"></span> Sedang Berlangsung</div>
-      </div>
+  <div class="container">
+    <div class="hero-label">● BERITA UTAMA</div>
+    <div class="hero-grid">
+      <article class="hero-main">
+        <div class="hero-img">
+          <img src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=1200&q=80" alt="Berita Utama" />
+          <span class="badge-red">TERKINI</span>
+        </div>
+        <div class="hero-body">
+          <span class="meta">Bogor • 10 Oktober 2026</span>
+          <h1>Stella Marcel Nelwan Rayakan Milad Bersama Keluarga Besar JA'PERS di Villa Empang Bogor</h1>
+          <p>Suasana penuh keakraban mewarnai perayaan hari ulang tahun Stella Marcel Nelwan yang digelar oleh wadah Jalin Persaudaraan (JA'PERS) di Villa Empang, Tajurhalang, Bogor.</p>
+          <a href="#" class="link-red">Baca Selengkapnya →</a>
+        </div>
+      </article>
+      <aside class="hero-side">
+        <h3 class="side-title">Berita Lainnya</h3>
+        <a href="#" class="side-item"><span class="meta">Nasional</span><h4>Analisis Kebijakan Baru di Sektor Ekonomi 2026</h4></a>
+        <a href="#" class="side-item"><span class="meta">Teknologi</span><h4>Masa Depan AI di Indonesia: Peluang & Tantangan</h4></a>
+        <a href="#" class="side-item"><span class="meta">Budaya</span><h4>Menelusuri Jejak Sejarah Nusantara</h4></a>
+        <a href="#" class="side-item"><span class="meta">Olahraga</span><h4>Final Liga: Momen yang Mengubah Segalanya</h4></a>
+      </aside>
     </div>
   </div>
 </section>
 
-<section class="section" id="video">
+<section class="section" id="berita">
   <div class="container">
     <div class="section-head">
       <div>
-        <span class="section-kicker">Galeri</span>
-        <h2 class="section-title">Video Terbaru</h2>
+        <span class="section-kicker">Berita Terbaru</span>
+        <h2 class="section-title">Kabar Ja'pers</h2>
       </div>
-      <a href="#" class="link-arrow">Lihat semua →</a>
+      <a href="#" class="link-red">Lihat semua →</a>
     </div>
-    <div class="video-grid">
-      <article class="video-card" data-video>
-        <div class="thumb">
-          <img src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=800&q=80" alt="Video 1" loading="lazy" />
-          <button class="play-btn" aria-label="Putar"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></button>
-          <span class="duration">04:12</span>
-        </div>
-        <div class="card-body">
-          <span class="category">Nasional</span>
-          <h3>Analisis Kebijakan Baru di Sektor Ekonomi</h3>
-          <p>Membedah dampak regulasi terbaru terhadap pasar.</p>
-        </div>
+    <div class="news-grid">
+      <article class="news-card">
+        <img src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=800&q=80" alt="Berita 1" />
+        <div class="news-body"><span class="category">Nasional</span><h3>Analisis Kebijakan Baru di Sektor Ekonomi</h3><p>Membedah dampak regulasi terbaru terhadap pasar dan masyarakat.</p></div>
       </article>
-      <article class="video-card" data-video>
-        <div class="thumb">
-          <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&q=80" alt="Video 2" loading="lazy" />
-          <button class="play-btn" aria-label="Putar"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></button>
-          <span class="duration">07:45</span>
-        </div>
-        <div class="card-body">
-          <span class="category">Teknologi</span>
-          <h3>Masa Depan AI di Indonesia</h3>
-          <p>Peluang dan tantangan kecerdasan buatan.</p>
-        </div>
+      <article class="news-card">
+        <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&q=80" alt="Berita 2" />
+        <div class="news-body"><span class="category">Teknologi</span><h3>Masa Depan AI di Indonesia</h3><p>Peluang, tantangan, dan etika dalam pengembangan kecerdasan buatan.</p></div>
       </article>
-      <article class="video-card" data-video>
-        <div class="thumb">
-          <img src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=800&q=80" alt="Video 3" loading="lazy" />
-          <button class="play-btn" aria-label="Putar"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></button>
-          <span class="duration">02:58</span>
-        </div>
-        <div class="card-body">
-          <span class="category">Budaya</span>
-          <h3>Menelusuri Jejak Sejarah Nusantara</h3>
-          <p>Perjalanan visual ke situs bersejarah.</p>
-        </div>
+      <article class="news-card">
+        <img src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=800&q=80" alt="Berita 3" />
+        <div class="news-body"><span class="category">Budaya</span><h3>Menelusuri Jejak Sejarah Nusantara</h3><p>Perjalanan visual ke situs-situs bersejarah yang jarang diketahui.</p></div>
       </article>
     </div>
   </div>
-</section><section class="section section--dark" id="trending">
+</section><section class="section section--dark" id="video">
   <div class="container">
     <div class="section-head">
       <div>
-        <span class="section-kicker">Paling Dicari</span>
-        <h2 class="section-title">Trending Minggu Ini</h2>
+        <span class="section-kicker">Video</span>
+        <h2 class="section-title">Tonton Ja'pers News</h2>
       </div>
     </div>
-    <div class="trend-list">
-      <div class="trend-item"><span class="trend-num">01</span><div class="trend-content"><span class="category">Politik</span><h3>Debat Publik: Arah Kebijakan 2025</h3></div><span class="trend-stat">+128%</span></div>
-      <div class="trend-item"><span class="trend-num">02</span><div class="trend-content"><span class="category">Ekonomi</span><h3>Rupiah & Pasar Global</h3></div><span class="trend-stat">+94%</span></div>
-      <div class="trend-item"><span class="trend-num">03</span><div class="trend-content"><span class="category">Olahraga</span><h3>Final Liga: Momen Penentu</h3></div><span class="trend-stat">+76%</span></div>
-      <div class="trend-item"><span class="trend-num">04</span><div class="trend-content"><span class="category">Sains</span><h3>Penemuan Baru Menantang Teori Lama</h3></div><span class="trend-stat">+61%</span></div>
+    <div class="video-wrap">
+      <div class="video-embed">
+        <!-- GANTI ID YOUTUBE DI BAWAH -->
+        <iframe
+          src="https://www.youtube.com/embed/VIDEO_ID_KAMU"
+          title="Video Ja'pers News"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen>
+        </iframe>
+      </div>
+      <div class="video-info">
+        <h3>Liputan Terbaru JA'PERS</h3>
+        <p>Simak video eksklusif seputar kegiatan dan berita terbaru dari keluarga besar JA'PERS.</p>
+      </div>
     </div>
   </div>
-</section>
-
-<section class="section" id="about">
+</section><section class="section" id="tentang">
   <div class="container about-grid">
-    <div class="about-text">
+    <div>
       <span class="section-kicker">Tentang Kami</span>
       <h2 class="section-title">Media yang Berpihak pada Fakta</h2>
-      <p>Ja'pers adalah media independen yang berkomitmen menyajikan informasi akurat, berimbang, dan mendalam.</p>
+      <p class="about-desc">Ja'pers News adalah media independen yang berkomitmen menyajikan informasi akurat, berimbang, dan mendalam untuk masyarakat.</p>
       <div class="about-points">
         <div class="point"><span class="dot"></span> Independen & Bebas Intervensi</div>
         <div class="point"><span class="dot"></span> Verifikasi Berlapis</div>
-        <div class="point"><span class="dot"></span> Fokus pada Video & Data</div>
+        <div class="point"><span class="dot"></span> Fokus pada Berita & Video</div>
       </div>
     </div>
     <div class="about-visual">
@@ -145,45 +129,36 @@
   </div>
 </section>
 
-<section class="section section--dark" id="contact">
+<section class="section section--dark" id="kontak">
   <div class="container contact-box">
-    <div class="contact-text">
+    <div>
       <span class="section-kicker">Newsletter</span>
       <h2 class="section-title">Dapatkan Update Eksklusif</h2>
-      <p>Berlangganan rangkuman berita & video terbaru setiap minggu.</p>
+      <p class="contact-desc">Berlangganan untuk menerima rangkuman berita dan video terbaru setiap minggu.</p>
     </div>
     <form class="subscribe-form" id="subscribeForm">
       <input type="email" id="emailInput" placeholder="Masukkan email Anda" required />
       <button type="submit" class="btn-primary">Berlangganan</button>
     </form>
   </div>
-</section><footer class="footer">
+</section>
+
+<footer class="footer">
   <div class="container footer-inner">
     <div class="footer-brand">
       <img src="LOGO_URL_DISINI" alt="Logo" class="logo-img small" />
       <div>
-        <span class="brand-name">Ja'pers</span>
+        <span class="brand-name">Ja'pers News</span>
         <p class="footer-tag">Media informasi & video berkualitas.</p>
       </div>
     </div>
     <div class="footer-links">
-      <a href="#home">Home</a><a href="#video">Video</a><a href="#trending">Trending</a>
-      <a href="#about">Tentang</a><a href="#contact">Kontak</a>
+      <a href="#home">Home</a><a href="#berita">Berita</a>
+      <a href="#video">Video</a><a href="#tentang">Tentang</a><a href="#kontak">Kontak</a>
     </div>
-    <p class="copyright">© <span id="year"></span> Ja'pers Media. All rights reserved.</p>
+    <p class="copyright">© <span id="year"></span> Ja'pers News. All rights reserved.</p>
   </div>
 </footer>
-
-<div class="modal" id="videoModal" aria-hidden="true">
-  <div class="modal-backdrop" data-close></div>
-  <div class="modal-content">
-    <button class="modal-close" id="modalClose" aria-label="Tutup">×</button>
-    <div class="modal-video-wrap">
-      <video id="modalVideo" controls playsinline><source src="" type="video/mp4" /></video>
-    </div>
-    <div class="modal-info"><h3 id="modalTitle">Judul Video</h3></div>
-  </div>
-</div>
 
 <script src="script.js"></script>
 </body>
