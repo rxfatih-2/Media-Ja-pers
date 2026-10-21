@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ja'pers News — Media Informasi</title>
+  <title>Media Ja'pers — Media Informasi</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
@@ -14,149 +14,78 @@
 <header class="navbar" id="navbar">
   <div class="container nav-inner">
     <a href="#" class="brand">
-      <img src="LOGO_URL_DISINI" alt="Logo Ja'pers" class="logo-img" />
+      <img src="Assets/foto1.jpg" alt="Logo Ja'pers" class="logo-img" />
       <div class="brand-text">
-        <span class="brand-name">Ja'pers</span>
-        <span class="brand-tag">NEWS</span>
+        <span class="brand-name">Media</span>
+        <span class="brand-tag">Ja'pers</span>
       </div>
     </a>
     <nav class="nav-links" id="navLinks">
       <a href="#home" class="active">Home</a>
-      <a href="#berita">Berita</a>
       <a href="#video">Video</a>
-      <a href="#tentang">Tentang</a>
-      <a href="#kontak">Kontak</a>
     </nav>
-    <div class="nav-actions">
-      <a href="#kontak" class="btn-primary">Subscribe</a>
-      <button class="hamburger" id="hamburger" aria-label="Menu">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
   </div>
 </header><section class="hero" id="home">
-  <div class="container">
-    <div class="hero-label">● BERITA UTAMA</div>
-    <div class="hero-grid">
-      <article class="hero-main">
-        <div class="hero-img">
-          <img src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=1200&q=80" alt="Berita Utama" />
-          <span class="badge-red">TERKINI</span>
-        </div>
-        <div class="hero-body">
-          <span class="meta">Bogor • 10 Oktober 2026</span>
-          <h1>Stella Marcel Nelwan Rayakan Milad Bersama Keluarga Besar JA'PERS di Villa Empang Bogor</h1>
-          <p>Suasana penuh keakraban mewarnai perayaan hari ulang tahun Stella Marcel Nelwan yang digelar oleh wadah Jalin Persaudaraan (JA'PERS) di Villa Empang, Tajurhalang, Bogor.</p>
-          <a href="#" class="link-red">Baca Selengkapnya →</a>
-        </div>
-      </article>
-      <aside class="hero-side">
-        <h3 class="side-title">Berita Lainnya</h3>
-        <a href="#" class="side-item"><span class="meta">Nasional</span><h4>Analisis Kebijakan Baru di Sektor Ekonomi 2026</h4></a>
-        <a href="#" class="side-item"><span class="meta">Teknologi</span><h4>Masa Depan AI di Indonesia: Peluang & Tantangan</h4></a>
-        <a href="#" class="side-item"><span class="meta">Budaya</span><h4>Menelusuri Jejak Sejarah Nusantara</h4></a>
-        <a href="#" class="side-item"><span class="meta">Olahraga</span><h4>Final Liga: Momen yang Mengubah Segalanya</h4></a>
-      </aside>
-    </div>
+  <div class="container hero-inner">
+    <span class="hero-label">● MEDIA JA'PERS</span>
+    <h1 class="hero-title">
+      Berita Sesuai Fakta,<br>
+      <span class="accent">Real Time.</span>
+    </h1>
+    <p class="hero-desc">Media Ja'pers menghadirkan informasi akurat dan video eksklusif dari peristiwa paling relevan.</p>
+    <a href="#video" class="btn-primary">Tonton Video</a>
   </div>
 </section>
 
-<section class="section" id="berita">
+<section class="section section--dark" id="video">
   <div class="container">
     <div class="section-head">
       <div>
-        <span class="section-kicker">Berita Terbaru</span>
-        <h2 class="section-title">Kabar Ja'pers</h2>
+        <span class="section-kicker">Galeri Video</span>
+        <h2 class="section-title">Tonton Media Ja'pers</h2>
       </div>
-      <a href="#" class="link-red">Lihat semua →</a>
     </div>
-    <div class="news-grid">
-      <article class="news-card">
-        <img src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=800&q=80" alt="Berita 1" />
-        <div class="news-body"><span class="category">Nasional</span><h3>Analisis Kebijakan Baru di Sektor Ekonomi</h3><p>Membedah dampak regulasi terbaru terhadap pasar dan masyarakat.</p></div>
+    <div class="video-grid">
+      <article class="video-card">
+        <div class="video-embed">
+          <iframe src="https://youtu.be/r1hpW12q2kE?si=4PbJgFJE9cf1A7rQ" title="Video Ja'pers 1"
+            frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+        </div>
+        <div class="video-info"><h3>Liputan Media Ja'pers</h3></div>
       </article>
-      <article class="news-card">
-        <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&q=80" alt="Berita 2" />
-        <div class="news-body"><span class="category">Teknologi</span><h3>Masa Depan AI di Indonesia</h3><p>Peluang, tantangan, dan etika dalam pengembangan kecerdasan buatan.</p></div>
+      <article class="video-card">
+        <div class="video-embed">
+          <iframe src="https://youtu.be/JwElPbIUsUQ?si=hUHov5ocituXc0wH" title="Video Ja'pers 2"
+            frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+        </div>
+        <div class="video-info"><h3>Dokumentasi Media Ja'pers</h3></div>
       </article>
-      <article class="news-card">
-        <img src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=800&q=80" alt="Berita 3" />
-        <div class="news-body"><span class="category">Budaya</span><h3>Menelusuri Jejak Sejarah Nusantara</h3><p>Perjalanan visual ke situs-situs bersejarah yang jarang diketahui.</p></div>
+      <article class="video-card">
+        <div class="video-embed">
+          <iframe src="https://youtu.be/Az-thrtKZiY?si=bgCZuslKjfRiATSR" title="Video Ja'pers 3"
+            frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+        </div>
+        <div class="video-info"><h3>Informasi Media Ja'pers</h3></div>
       </article>
     </div>
   </div>
-</section><section class="section section--dark" id="video">
-  <div class="container">
-    <div class="section-head">
-      <div>
-        <span class="section-kicker">Video</span>
-        <h2 class="section-title">Tonton Ja'pers News</h2>
-      </div>
-    </div>
-    <div class="video-wrap">
-      <div class="video-embed">
-        <!-- GANTI ID YOUTUBE DI BAWAH -->
-        <iframe
-          src="https://www.youtube.com/embed/VIDEO_ID_KAMU"
-          title="Video Ja'pers News"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen>
-        </iframe>
-      </div>
-      <div class="video-info">
-        <h3>Liputan Terbaru JA'PERS</h3>
-        <p>Simak video eksklusif seputar kegiatan dan berita terbaru dari keluarga besar JA'PERS.</p>
-      </div>
-    </div>
-  </div>
-</section><section class="section" id="tentang">
-  <div class="container about-grid">
-    <div>
-      <span class="section-kicker">Tentang Kami</span>
-      <h2 class="section-title">Media yang Berpihak pada Fakta</h2>
-      <p class="about-desc">Ja'pers News adalah media independen yang berkomitmen menyajikan informasi akurat, berimbang, dan mendalam untuk masyarakat.</p>
-      <div class="about-points">
-        <div class="point"><span class="dot"></span> Independen & Bebas Intervensi</div>
-        <div class="point"><span class="dot"></span> Verifikasi Berlapis</div>
-        <div class="point"><span class="dot"></span> Fokus pada Berita & Video</div>
-      </div>
-    </div>
-    <div class="about-visual">
-      <div class="stat-card"><strong>1.2M</strong><span>Tayangan Bulanan</span></div>
-      <div class="stat-card stat-card--accent"><strong>98%</strong><span>Akurasi Liputan</span></div>
-    </div>
-  </div>
-</section>
-
-<section class="section section--dark" id="kontak">
-  <div class="container contact-box">
-    <div>
-      <span class="section-kicker">Newsletter</span>
-      <h2 class="section-title">Dapatkan Update Eksklusif</h2>
-      <p class="contact-desc">Berlangganan untuk menerima rangkuman berita dan video terbaru setiap minggu.</p>
-    </div>
-    <form class="subscribe-form" id="subscribeForm">
-      <input type="email" id="emailInput" placeholder="Masukkan email Anda" required />
-      <button type="submit" class="btn-primary">Berlangganan</button>
-    </form>
-  </div>
-</section>
-
-<footer class="footer">
+</section><footer class="footer">
   <div class="container footer-inner">
     <div class="footer-brand">
-      <img src="LOGO_URL_DISINI" alt="Logo" class="logo-img small" />
+      <img src="Assets/foto1.jpg" alt="Logo" class="logo-img small" />
       <div>
-        <span class="brand-name">Ja'pers News</span>
+        <span class="brand-name">Media Ja'pers</span>
         <p class="footer-tag">Media informasi & video berkualitas.</p>
       </div>
     </div>
     <div class="footer-links">
-      <a href="#home">Home</a><a href="#berita">Berita</a>
-      <a href="#video">Video</a><a href="#tentang">Tentang</a><a href="#kontak">Kontak</a>
+      <a href="#home">Home</a>
+      <a href="#video">Video</a>
     </div>
-    <p class="copyright">© <span id="year"></span> Ja'pers News. All rights reserved.</p>
+    <p class="copyright">© <span id="year"></span>Media Ja'pers. All rights reserved.</p>
   </div>
 </footer>
 
