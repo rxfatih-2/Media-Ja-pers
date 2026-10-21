@@ -18,21 +18,4 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   document.getElementById('year').textContent = new Date().getFullYear();
-
-  const form = document.getElementById('subscribeForm');
-  const email = document.getElementById('emailInput');
-  form.addEventListener('submit', e => {
-    e.preventDefault();
-    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value.trim())) {
-      email.style.outline = '2px solid #e11d2e';
-      setTimeout(() => (email.style.outline = ''), 1500);
-      return;
-    }
-    const btn = form.querySelector('button');
-    const original = btn.textContent;
-    btn.textContent = '✓ Terdaftar!';
-    btn.style.background = '#0d0d0f';
-    email.value = '';
-    setTimeout(() => { btn.textContent = original; btn.style.background = ''; }, 2500);
-  });
 });
