@@ -37,7 +37,7 @@ document.addEventListener('keydown', e => {
 /* ===== WHATSAPP ===== */
 document.getElementById('waBtn').addEventListener('click', e => {
   e.preventDefault();
-  const nomor = '6281234567890'; // ganti nomor panitia
+  const nomor = '628818217251'; // ganti nomor panitia
   const pesan = encodeURIComponent(
     "Halo Media Ja'pers, saya ingin bertanya / bekerja sama terkait pemberitaan dan konten video."
   );
