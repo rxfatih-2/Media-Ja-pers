@@ -1,133 +1,61 @@
-(function () {
-  "use strict";
+/* ===== HAMBURGER DRAWER ===== */
+const hamburger = document.getElementById('hamburger');
+const drawer = document.getElementById('drawer');
+const backdrop = document.getElementById('drawerBackdrop');
 
-  const yearEl = document.getElementById("year");
-  if (yearEl) yearEl.textContent = new Date().getFullYear();
+function openDrawer() {
+  drawer.classList.add('open');
+  backdrop.classList.add('show');
+  hamburger.classList.add('active');
+  hamburger.setAttribute('aria-expanded', 'true');
+  drawer.setAttribute('aria-hidden', 'false');
+  document.body.style.overflow = 'hidden';
+}
 
-  const navToggle = document.getElementById("navToggle");
-  const navMenu = document.getElementById("navMenu");
+function closeDrawer() {
+  drawer.classList.remove('open');
+  backdrop.classList.remove('show');
+  hamburger.classList.remove('active');
+  hamburger.setAttribute('aria-expanded', 'false');
+  drawer.setAttribute('aria-hidden', 'true');
+  document.body.style.overflow = '';
+}
 
-  function closeNav() {
-    navToggle.classList.remove("open");
-    navMenu.classList.remove("open");
-    navToggle.setAttribute("aria-expanded", "false");
-  }
+hamburger.addEventListener('click', () => {
+  drawer.classList.contains('open') ? closeDrawer() : openDrawer();
+});
+backdrop.addEventListener('click', closeDrawer);
 
-  if (navToggle && navMenu) {
-    navToggle.addEventListener("click", function () {
-      const isOpen = navMenu.classList.toggle("open");
-      navToggle.classList.toggle("open", isOpen);
-      navToggle.setAttribute("aria-expanded", String(isOpen));
-    });
-    navMenu.querySelectorAll(".nav-link").forEach((l) => l.addEventListener("click", closeNav));
-    document.addEventListener("click", (e) => {
-      if (navMenu.classList.contains("open") && !navMenu.contains(e.target) && !navToggle.contains(e.target)) closeNav();
-    });
-  }const header = document.getElementById("siteHeader");
-window.addEventListener("scroll", () => {
-  header.classList.toggle("scrolled", window.scrollY > 10);
-}, { passive: true });
+document.querySelectorAll('[data-nav]').forEach(link => {
+  link.addEventListener('click', closeDrawer);
+});
 
-const sections = document.querySelectorAll("section[id]");
-const navLinks = document.querySelectorAll(".nav-link");
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape' && drawer.classList.contains('open')) closeDrawer();
+});
 
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
+/* ===== WHATSAPP ===== */
+document.getElementById('waBtn').addEventListener('click', e => {
+  e.preventDefault();
+  const nomor = '6281234567890'; // ganti nomor panitia
+  const pesan = encodeURIComponent(
+    "Halo Media Ja'pers, saya ingin bertanya / bekerja sama terkait pemberitaan dan konten video."
+  );
+  window.open(`https://wa.me/${nomor}?text=${pesan}`, '_blank', 'noopener');
+});
+
+/* ===== REVEAL ON SCROLL ===== */
+const revealTargets = document.querySelectorAll(
+  '.section-head, .banner-card, .video-card, .photo-card, .channel-section .container, .contact-section .container'
+);
+revealTargets.forEach(el => el.classList.add('reveal'));
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
     if (entry.isIntersecting) {
-      const id = entry.target.getAttribute("id");
-      navLinks.forEach((link) => {
-        link.classList.toggle("active", link.getAttribute("href") === "#" + id);
-      });
+      entry.target.classList.add('in');
+      observer.unobserve(entry.target);
     }
   });
-}, { rootMargin: "-45% 0px -50% 0px", threshold: 0 });
-
-sections.forEach((s) => observer.observe(s));  const modal = document.getElementById("videoModal");
-  const player = document.getElementById("modalPlayer");
-  const thumbs = document.querySelectorAll(".video-thumb");
-
-  function openVideo(videoId) {
-    if (!modal || !player) return;
-    player.innerHTML = '<iframe src="https://www.youtube.com/embed/' + videoId +
-      '?autoplay=1&rel=0" title="Pemutar video" ' +
-      'allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" ' +
-      'allowfullscreen></iframe>';
-    modal.classList.add("active");
-    modal.setAttribute("aria-hidden", "false");
-    document.body.style.overflow = "hidden";
-  }
-
-  function closeVideo() {
-    if (!modal || !player) return;
-    modal.classList.remove("active");
-    modal.setAttribute("aria-hidden", "true");
-    player.innerHTML = "";
-    document.body.style.overflow = "";
-  }
-
-  thumbs.forEach((t) => {
-    t.addEventListener("click", () => {
-      const id = t.getAttribute("data-video");
-      if (id) openVideo(id);
-    });
-  });
-
-  modal.querySelectorAll("[data-close]").forEach((el) => el.addEventListener("click", closeVideo));
-  document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape" && modal.classList.contains("active")) closeVideo();
-  });
-
-  document.querySelectorAll(".video-thumb img").forEach((img) => {
-    img.addEventListener("error", () => {
-      img.src = "data:image/svg+xml;utf8," + encodeURIComponent(
-        '<svg xmlns="http://www.w3.org/2000/svg" width="480" height="270">' +
-        '<rect width="100%" height="100%" fill="#161f2b"/>' +
-        '<text x="50%" y="50%" fill="#9aa8b8" font-family="Arial" font-size="16" text-anchor="middle" dominant-baseline="middle">Media Ja\'pers</text></svg>'
-      );
-    });
-  });
-})();  const modal = document.getElementById("videoModal");
-  const player = document.getElementById("modalPlayer");
-  const thumbs = document.querySelectorAll(".video-thumb");
-
-  function openVideo(videoId) {
-    if (!modal || !player) return;
-    player.innerHTML = '<iframe src="https://www.youtube.com/embed/' + videoId +
-      '?autoplay=1&rel=0" title="Pemutar video" ' +
-      'allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" ' +
-      'allowfullscreen></iframe>';
-    modal.classList.add("active");
-    modal.setAttribute("aria-hidden", "false");
-    document.body.style.overflow = "hidden";
-  }
-
-  function closeVideo() {
-    if (!modal || !player) return;
-    modal.classList.remove("active");
-    modal.setAttribute("aria-hidden", "true");
-    player.innerHTML = "";
-    document.body.style.overflow = "";
-  }
-
-  thumbs.forEach((t) => {
-    t.addEventListener("click", () => {
-      const id = t.getAttribute("data-video");
-      if (id) openVideo(id);
-    });
-  });
-
-  modal.querySelectorAll("[data-close]").forEach((el) => el.addEventListener("click", closeVideo));
-  document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape" && modal.classList.contains("active")) closeVideo();
-  });
-
-  document.querySelectorAll(".video-thumb img").forEach((img) => {
-    img.addEventListener("error", () => {
-      img.src = "data:image/svg+xml;utf8," + encodeURIComponent(
-        '<svg xmlns="http://www.w3.org/2000/svg" width="480" height="270">' +
-        '<rect width="100%" height="100%" fill="#161f2b"/>' +
-        '<text x="50%" y="50%" fill="#9aa8b8" font-family="Arial" font-size="16" text-anchor="middle" dominant-baseline="middle">Media Ja\'pers</text></svg>'
-      );
-    });
-  });
-})();
+}, { threshold: 0.15 });
+revealTargets.forEach(el => observer.observe(el));
