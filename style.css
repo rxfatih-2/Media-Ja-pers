@@ -324,3 +324,143 @@ h1, h2, h3 { font-family: 'Cormorant Garamond', serif; font-weight: 600; line-he
   line-height: 1.5;
   margin: 0;
 }
+/* --- PENGATURAN DASAR & LAYOUT GRID --- */
+.video-section {
+  padding: 20px 16px;
+  background-color: #f9f9f9;
+  display: flex;
+  justify-content: center;
+}
+
+.video-grid {
+  display: grid;
+  grid-template-columns: 1fr; /* 1 Kolom di HP */
+  gap: 20px;
+  width: 100%;
+  max-width: 900px;
+}
+
+/* 2 Kolom jika dibuka di Tablet/Laptop */
+@media (min-width: 768px) {
+  .video-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* --- DESAIN KARTU --- */
+.video-card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  overflow: hidden; /* Penting agar gambar tidak melewati sudut melengkung */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* Bayangan halus */
+  border: 1px solid #eaeaea;
+  display: flex;
+  flex-direction: column; /* Menyusun elemen dari atas ke bawah */
+  height: 100%; /* Memastikan semua kartu sama tingginya */
+}
+
+/* --- PENGATURAN GAMBAR --- */
+.video-thumb-wrapper {
+  position: relative;
+  width: 100%;
+  height: 200px; /* Tinggi gambar dikunci agar seragam */
+  margin: 0;
+  background-color: #000;
+}
+
+.video-thumb {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* MEMOTONG GAMBAR RAPI TANPA GEPENG */
+  object-position: center;
+  display: block;
+}
+
+/* Tombol Play di tengah gambar */
+.play-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #ff0000;
+  color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  padding-left: 4px;
+}
+
+/* --- PENGATURAN TEKS --- */
+.video-content {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1; /* Mendorong link sumber ke paling bawah */
+}
+
+.badge {
+  font-size: 10px;
+  font-weight: 700;
+  padding: 4px 8px;
+  border-radius: 4px;
+  align-self: flex-start;
+  margin-bottom: 12px;
+  letter-spacing: 0.5px;
+}
+
+.badge-red {
+  background-color: #ffe6e6;
+  color: #cc0000;
+}
+
+.video-title {
+  font-family: 'Georgia', serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #222;
+  margin: 0 0 10px 0;
+  line-height: 1.4;
+  
+  /* MEMOTONG JUDUL JIKA LEBIH DARI 2 BARIS */
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.video-desc {
+  font-family: 'Arial', sans-serif;
+  font-size: 0.85rem;
+  color: #666;
+  line-height: 1.5;
+  margin: 0 0 16px 0;
+  
+  /* MEMOTONG DESKRIPSI JIKA LEBIH DARI 3 BARIS (INI KUNCI UTAMANYA) */
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.video-link {
+  font-size: 0.85rem;
+  color: #000;
+  font-weight: bold;
+  text-decoration: none;
+  margin-top: auto;
+}
+
+.video-link:hover {
+  color: #cc0000;
+}
+
+.video-source {
+  font-size: 0.75rem;
+  color: #a00;
+  font-weight: bold;
+  margin-top: auto; /* Selalu berada di dasar kartu */
+}
